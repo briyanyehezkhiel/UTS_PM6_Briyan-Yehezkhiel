@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">Pembuat Kartu Ucapan</string>
+    <string name="app_name">Happy Graduation</string>
     <string name="message_hint">Masukkan pesan anda</string>
     <string name="create_card">Buat Kartu</string>
     <string name="default_message">Pesan Kosong</string>
+    <string name="dark_mode">Dark Mode</string>
 </resources>
