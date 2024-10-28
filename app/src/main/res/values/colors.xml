@@ -1,7 +1,32 @@
 <resources>
+    <!-- Static colors -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="purple_500">#6200EE</color>
     <color name="purple_700">#3700B3</color>
     <color name="teal_200">#03DAC5</color>
+
+    <!-- Colors that adapt to dark/light mode -->
+    <color name="colorPrimary">?attr/colorPrimary</color>
+    <color name="colorPrimaryDark">?attr/colorPrimaryDark</color>
+    <color name="colorAccent">?attr/colorAccent</color>
+
+    <!-- Adaptive background and text colors -->
+    <color name="colorBackground">?attr/colorBackground</color>
+    <color name="colorOnBackground">?attr/colorOnBackground</color>
+    <color name="textColorPrimary">?attr/colorOnBackground</color>
+
+    <!-- Custom toolbar background color (optional) -->
+    <color name="toolbarBackground">?attr/colorPrimary</color>
+
+    <!-- ScrollView background for light/dark theme -->
+    <color name="scrollViewBackground">@color/white</color>
+    <color name="scrollViewBackgroundDark">@color/black</color>
+
+    <!-- Button colors -->
+    <color name="buttonTextColor">?attr/colorOnPrimary</color>
+    <color name="buttonBackground">?attr/colorPrimary</color>
+
+        <attr name="colorBackground" format="reference|color" />
+        <attr name="colorOnBackground" format="reference|color" />
 </resources>
