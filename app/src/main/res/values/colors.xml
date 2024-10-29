@@ -5,6 +5,7 @@
     <color name="purple_500">#6200EE</color>
     <color name="purple_700">#3700B3</color>
     <color name="teal_200">#03DAC5</color>
+    <color name="abuabu">#b7c7eb</color>
 
     <!-- Colors that adapt to dark/light mode -->
     <color name="colorPrimary">?attr/colorPrimary</color>
@@ -20,7 +21,7 @@
     <color name="toolbarBackground">?attr/colorPrimary</color>
 
     <!-- ScrollView background for light/dark theme -->
-    <color name="scrollViewBackground">@color/white</color>
+    <color name="scrollViewBackground">@color/abuabu</color>
     <color name="scrollViewBackgroundDark">@color/black</color>
 
     <!-- Button colors -->
