@@ -48,75 +48,88 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="200dp">
+<!--                android:background="@drawable/border_image"-->
 
                 <ImageView
+                    android:layout_gravity="start"
                     android:id="@+id/card_image"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/ic_launcher_foreground"
+                    android:scaleType="fitStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/template1"
                     android:contentDescription="@string/card_image_description" />
 
                 <!-- Nama Pengguna, Nama Instansi, dan Nama Tujuan di atas gambar -->
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_marginTop="90dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_gravity="center"
                     android:padding="8dp">
-
-                    <TextView
-                        android:id="@+id/user_name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/namaPengirim"
-                        android:textSize="20sp"
-                        android:textColor="@android:color/white" />
 
                     <TextView
                         android:id="@+id/target_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:fontFamily="@font/sailorvito"
                         android:text="@string/namaTujuan"
-                        android:textSize="20sp"
-                        android:textColor="@android:color/white" />
+                        android:textColor="@color/teal_200"
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/message_detail"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:fontFamily="@font/quicksand_regular"
                         android:text="@string/message_hint"
-                        android:textSize="20sp"
-                        android:textColor="@android:color/white" />
+                        android:textColor="@color/teal_200"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:fontFamily="@font/sailorvito"
+                        android:id="@+id/user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:text="@string/namaPengirim"
+                        android:textColor="@color/teal_200"
+                        android:textSize="11sp" />
+
                 </LinearLayout>
             </FrameLayout>
 
             <!-- Keterangan di bawah gambar -->
             <TextView
+                android:fontFamily="@font/quicksand_regular"
                 android:id="@+id/sender_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/namaPengirim"
                 android:textSize="18sp"
                 android:layout_marginTop="8dp"
-                android:textColor="@android:color/black"/>
+                android:textColor="@color/teal_200"/>
 
             <TextView
+                android:fontFamily="@font/quicksand_regular"
                 android:id="@+id/target_name_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/namaTujuan"
                 android:textSize="18sp"
                 android:layout_marginTop="4dp"
-                android:textColor="@android:color/black"/>
+                android:textColor="@color/teal_200"/>
 
             <TextView
+                android:fontFamily="@font/quicksand_regular"
                 android:id="@+id/message_detail1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/message_hint"
                 android:textSize="18sp"
                 android:layout_marginTop="4dp"
-                android:textColor="@android:color/black"/>
+                android:textColor="@color/teal_200"/>
         </LinearLayout>
     </ScrollView>
 

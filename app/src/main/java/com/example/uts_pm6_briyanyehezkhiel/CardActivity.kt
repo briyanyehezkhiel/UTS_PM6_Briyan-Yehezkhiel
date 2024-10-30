@@ -14,9 +14,9 @@ import androidx.preference.PreferenceManager
 
 class CardActivity : AppCompatActivity() {
 
-    private lateinit var senderName: TextView // TextView untuk nama pengirim
-    private lateinit var messageDetail: TextView // TextView untuk detail pesan
-    private lateinit var targetName: TextView // TextView untuk nama
+    private lateinit var senderName: TextView
+    private lateinit var messageDetail: TextView
+    private lateinit var targetName: TextView
     private lateinit var senderName1: TextView
     private lateinit var messageDetail1: TextView
     private lateinit var targetName1: TextView
@@ -30,10 +30,9 @@ class CardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_card)
 
-        // Inisialisasi komponen
-        senderName = findViewById(R.id.user_name) // TextView untuk nama pengirim
-        messageDetail = findViewById(R.id.message_detail) // TextView untuk detail pesan
-        targetName = findViewById(R.id.target_name) // TextView untuk nama
+        senderName = findViewById(R.id.user_name)
+        messageDetail = findViewById(R.id.message_detail)
+        targetName = findViewById(R.id.target_name)
         senderName1 = findViewById(R.id.sender_name)
         messageDetail1 = findViewById(R.id.message_detail1)
         targetName1 = findViewById(R.id.target_name_details)
@@ -42,23 +41,18 @@ class CardActivity : AppCompatActivity() {
         toolbar = findViewById(R.id.toolbar)
         nameApp = findViewById(R.id.nameApp)
 
-        // Inisialisasi SharedPreferences
         preferences = PreferenceManager.getDefaultSharedPreferences(this)
 
-        // Mengatur tema sesuai mode saat ini
         val isDarkMode = preferences.getBoolean("DARK_MODE", false)
         AppCompatDelegate.setDefaultNightMode(
             if (isDarkMode) AppCompatDelegate.MODE_NIGHT_YES else AppCompatDelegate.MODE_NIGHT_NO
         )
-        updateTheme()
 
-        // Mengatur Switch berdasarkan mode saat ini
         darkModeSwitch.isChecked = isDarkMode
         darkModeSwitch.setOnCheckedChangeListener { _, isChecked ->
             setDarkMode(isChecked)
         }
 
-        // Menampilkan data dari intent
         val sender = intent.getStringExtra("SENDER_NAME") ?: getString(R.string.default_message)
         val message = intent.getStringExtra("MESSAGE_HINT") ?: getString(R.string.default_message)
         val target = intent.getStringExtra("TARGET_NAME") ?: getString(R.string.default_message)
@@ -69,6 +63,8 @@ class CardActivity : AppCompatActivity() {
         senderName1.text = sender
         messageDetail1.text = message
         targetName1.text = target
+
+        updateTheme()
     }
 
     override fun onConfigurationChanged(newConfig: Configuration) {
@@ -77,25 +73,21 @@ class CardActivity : AppCompatActivity() {
     }
 
     private fun setDarkMode(isEnabled: Boolean) {
-        if (isEnabled != preferences.getBoolean("DARK_MODE", false)) {
-            preferences.edit().putBoolean("DARK_MODE", isEnabled).apply()
-            AppCompatDelegate.setDefaultNightMode(
-                if (isEnabled) AppCompatDelegate.MODE_NIGHT_YES else AppCompatDelegate.MODE_NIGHT_NO
-            )
-            updateTheme()
-        }
+        preferences.edit().putBoolean("DARK_MODE", isEnabled).apply()
+        AppCompatDelegate.setDefaultNightMode(
+            if (isEnabled) AppCompatDelegate.MODE_NIGHT_YES else AppCompatDelegate.MODE_NIGHT_NO
+        )
     }
 
     private fun updateTheme() {
-        val isDark = AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES
-        val backgroundColor = if (isDark) R.color.black else R.color.white
-        val textColor = if (isDark) R.color.white else R.color.black
-
-        toolbar.setBackgroundColor(ContextCompat.getColor(this, backgroundColor))
-        toolbar.setTitleTextColor(ContextCompat.getColor(this, textColor))
-        nameApp.setTextColor(ContextCompat.getColor(this, textColor))
-        senderName.setTextColor(ContextCompat.getColor(this, textColor))
-        messageDetail.setTextColor(ContextCompat.getColor(this, textColor))
-        targetName.setTextColor(ContextCompat.getColor(this, textColor))
+        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+            toolbar.setBackgroundColor(ContextCompat.getColor(this, R.color.black))
+            toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.white))
+            nameApp.setTextColor(ContextCompat.getColor(this, R.color.white))
+        } else {
+            toolbar.setBackgroundColor(ContextCompat.getColor(this, R.color.white))
+            toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.black))
+            nameApp.setTextColor(ContextCompat.getColor(this, R.color.black))
+        }
     }
 }
