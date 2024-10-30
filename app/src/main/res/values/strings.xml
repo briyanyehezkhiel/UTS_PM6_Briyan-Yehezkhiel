@@ -7,4 +7,5 @@
     <string name="card_image_description">Image\n</string>
     <string name="namaPengirim">Masukkan Nama Pengirim</string>
     <string name="namaTujuan">Masukkan Nama Tujuan</string>
+    <string name="dark_mode_switch_description">Dark Mode</string>
 </resources>

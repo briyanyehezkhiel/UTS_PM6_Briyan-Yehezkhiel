@@ -27,6 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
+            android:contentDescription="@string/dark_mode_switch_description"
             android:textColor="@android:color/white"
             android:padding="16sp"/>
     </androidx.appcompat.widget.Toolbar>
@@ -69,7 +70,7 @@
 
                     <TextView
                         android:id="@+id/target_name"
-                        android:layout_width="wrap_content"
+                        android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="start"
                         android:fontFamily="@font/sailorvito"
@@ -79,10 +80,10 @@
 
                     <TextView
                         android:id="@+id/message_detail"
-                        android:layout_width="wrap_content"
+                        android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="start"
-                        android:fontFamily="@font/quicksand_regular"
+                        android:fontFamily="@font/christnolandemo"
                         android:text="@string/message_hint"
                         android:textColor="@color/teal_200"
                         android:textSize="30sp" />
@@ -90,7 +91,7 @@
                     <TextView
                         android:fontFamily="@font/sailorvito"
                         android:id="@+id/user_name"
-                        android:layout_width="wrap_content"
+                        android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="start"
                         android:text="@string/namaPengirim"

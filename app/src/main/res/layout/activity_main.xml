@@ -23,6 +23,7 @@
         <!-- Dark Mode Switch -->
         <androidx.appcompat.widget.SwitchCompat
             android:padding="16sp"
+            android:contentDescription="@string/dark_mode_switch_description"
             android:id="@+id/dark_mode_switch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
