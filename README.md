@@ -17,7 +17,8 @@ BY Studio adalah aplikasi pembuat kartu ucapan yang sederhana dimana pengguna ak
 - ![WhatsApp Image 2024-10-30 at 23 56 55_b55b0a11](https://github.com/user-attachments/assets/72ce3278-20f1-49a3-9914-58e3a7a6494f)
 
 ## 📥 APK
-Anda dapat mengunduh APK dari aplikasi ini di [Tab Releases](https://github.com/briyanyehezkhiel/UTS_PM6_Briyan-Yehezkhiel/releases).
+- Anda dapat mengunduh APK dari aplikasi ini di [Tab Releases](https://github.com/briyanyehezkhiel/UTS_PM6_Briyan-Yehezkhiel/releases).
+- Desain Figma (https://www.figma.com/design/tISeNm1lZWF87lrwowa008/Untitled?node-id=1-1158&t=xrhfdYqUoV6XqUmp-1).
 
 ## 🎨 Credits
 Aplikasi ini menggunakan font dari sumber eksternal berikut:
